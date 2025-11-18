@@ -27,7 +27,7 @@ class ProdutoCard extends StatelessWidget {
       );
     },
       child: Container(
-        width: 250,
+        width: 210,
         decoration: BoxDecoration(
           border: Border.all(
             color: Color.fromRGBO(179, 177, 177, 1),
@@ -41,8 +41,8 @@ class ProdutoCard extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
               child: SizedBox(
-                width: 250,
-                height: 200,
+                width: 210,
+                height: 180,
                 child: Image.asset(
                   imagem,
                   fit: BoxFit.cover,
