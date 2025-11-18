@@ -12,12 +12,126 @@ class VirtusApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+      endDrawer: Drawer(
+        child: Column(
+          children: [
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  'Feminino',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600
+                  ),
+                ),
+                SizedBox(width: 30),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.black,
+                  )
+                )
+                ]
+            ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  'Feminino',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600
+                  ),
+                ),
+                SizedBox(width: 30),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.black,
+                  )
+                )
+                ]
+            ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  'Masculino',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600
+                  ),
+                ),
+                SizedBox(width: 30),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.black,
+                  )
+                )
+                ]
+            ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  'Feminino',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600
+                  ),
+                ),
+                SizedBox(width: 30),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.black,
+                  )
+                )
+                ]
+            ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  'Feminino',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600
+                  ),
+                ),
+                SizedBox(width: 30),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.black,
+                  )
+                )
+                ]
+            ),
+          ],
+        ),
+      ),
       backgroundColor: Colors.white,
-        
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(140),
+        preferredSize: const Size.fromHeight(150),
+        
         child: AppBar(
           automaticallyImplyLeading: false,
+            iconTheme: IconThemeData(
+            color: Color.fromRGBO(35, 35, 35, 1),
+            ),
           backgroundColor: const Color.fromRGBO(35, 35, 35, 1),
           flexibleSpace: SafeArea(
             child: Column(
@@ -35,11 +149,21 @@ class VirtusApp extends StatelessWidget {
                         height: 32,
                       ),
                       Row(
-                        children: const [
+                        children: [
                           Icon(Icons.person_outline, color: Colors.white),
                           SizedBox(width: 12),
                           Icon(Icons.shopping_bag_outlined, color: Colors.white),
                           SizedBox(width: 12),
+                          Builder(
+                            builder: (context) {
+                              return IconButton(
+                                icon: Icon(Icons.menu, color: Colors.white),
+                                onPressed: () {
+                                  Scaffold.of(context).openEndDrawer();
+                                },
+                              );
+                            },
+                          ),
                         ],
                       ),
                     ],
