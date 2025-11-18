@@ -12,63 +12,71 @@ class VirtusApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                color: const Color.fromRGBO(35, 35, 35, 1),
-                child: SafeArea(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+      backgroundColor: Colors.white,
+        
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(140),
+        child: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: const Color.fromRGBO(35, 35, 35, 1),
+          flexibleSpace: SafeArea(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 12,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Image.asset(
-                              'assets/img/logo.png',
-                              height: 32,
-                            ),
-
-                            Row(
-                              children: const [
-                                Icon(Icons.person_outline, color: Colors.white),
-                                SizedBox(width: 12),
-                                Icon(Icons.shopping_bag_outlined, color: Colors.white),
-                                SizedBox(width: 12),
-                                Icon(Icons.menu, color: Colors.white),
-                              ],
-                            ),
-                          ],
-                        ),
+                      Image.asset(
+                        'assets/img/logo.png',
+                        height: 32,
                       ),
-
-
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: 'O que você está procurando?',
-                            suffixIcon: const Icon(Icons.search, color: Colors.black,),
-                            hintStyle: const TextStyle(color: Color.fromRGBO(86, 86, 86, 1)),
-                            fillColor: Color.fromRGBO(248, 247, 247, 1),
-                            filled: true,
-                            contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 12),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none,
-                            ),
-                          ),
-                        ),
+                      Row(
+                        children: const [
+                          Icon(Icons.person_outline, color: Colors.white),
+                          SizedBox(width: 12),
+                          Icon(Icons.shopping_bag_outlined, color: Colors.white),
+                          SizedBox(width: 12),
+                        ],
                       ),
                     ],
                   ),
                 ),
-              ),
+                SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'O que você está procurando?',
+                      suffixIcon: const Icon(Icons.search, color: Colors.black),
+                      hintStyle: const TextStyle(
+                        color: Color.fromRGBO(86, 86, 86, 1),
+                      ),
+                      fillColor: const Color.fromRGBO(248, 247, 247, 1),
+                      filled: true,
+                      contentPadding: const EdgeInsets.symmetric(
+                        vertical: 0,
+                        horizontal: 12,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
 
-
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
               Container(
                 width: double.infinity,
                 color: Colors.grey.shade400,
@@ -100,7 +108,7 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Container(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
                         width: 230,
@@ -227,7 +235,7 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Container(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
                         width: 230,
@@ -424,7 +432,7 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Container(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
                         width: 230,
@@ -552,7 +560,7 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Container(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
                         width: 230,
@@ -699,7 +707,7 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Container(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
                         width: 230,
@@ -827,7 +835,7 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Container(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
                         width: 230,
@@ -957,7 +965,7 @@ class VirtusApp extends StatelessWidget {
                   width: double.infinity,
                   color: Color.fromRGBO(35, 35, 35, 1),
                   child: Padding(padding: const EdgeInsets.fromLTRB(10, 10, 0, 0),
-                    child: Column(
+                    child:Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -985,24 +993,133 @@ class VirtusApp extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 20),
-                      Padding(padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                      Padding(padding: const EdgeInsets.fromLTRB(0, 25, 0, 25),
                         child: Column(
-                        children: [
-                          Text(
-                            'Endereço: blablabla blabla',
-                            style: TextStyle(
-                              color: Color.fromRGBO(255, 255, 255, 1),
-                              fontSize: 14,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Endereço: blablabla blabla',
+                              style: TextStyle(
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                fontSize: 14,
+                              ),
                             ),
+                            Text(
+                              'Telefone: xxxxxxxx',
+                              style: TextStyle(
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                fontSize: 14,
+                              ),
+                            ),
+                            Text(
+                              'Email: blablabla@gmail.com',
+                              style: TextStyle(
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                fontSize: 14,
+                              ),
+                            ),
+                          ]
+                        )
+                      ),
+                      Text(
+                        'Formas de Pagamento',
+                        style: TextStyle(
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                          fontSize: 16,
+                        ),
+                      ),
+                      SizedBox(height: 1),
+                      Row(
+                      children: [
+                        Container(
+                          width: 40,
+                          height: 20,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(217, 217, 217, 1),
+                            borderRadius: BorderRadius.circular(8),
                           ),
-                        ]
-                      )
-                      )
+                          child: Image.asset(
+                            'img/fp1.png',
+                          ),
+                        ),
+                        SizedBox(width:8),
+                        Container(
+                          width: 40,
+                          height: 20,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(217, 217, 217, 1),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Image.asset(
+                            'img/fp2.png',
+                          ),
+                        ),
+                        SizedBox(width:8),
+                        Container(
+                          width: 40,
+                          height: 20,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(217, 217, 217, 1),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Image.asset(
+                            'img/fp3.png',
+                          ),
+                        ),
+                        SizedBox(width:8),
+                        Container(
+                          width: 40,
+                          height: 20,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(217, 217, 217, 1),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Image.asset(
+                            'img/fp4.png',
+                          ),
+                        ),
+                        SizedBox(width:8),
+                        Container(
+                          width: 40,
+                          height: 20,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(217, 217, 217, 1),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Image.asset(
+                            'img/fp5.png',
+                          ),
+                        )
+                      ]
+                      ),
+
+                      SizedBox(height: 30),
+                                        
+
                     ]
-                  )
+                    )
                 )
-                )
+              ),
+
+              Container(
+                width: double.infinity,
+                height: 1,
+                color: Color.fromRGBO(255, 255, 255, 1),
+              ),
+              
+              Container(
+                padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                width: double.infinity,
+                color: Color.fromRGBO(35, 35, 35, 1),
+                alignment: Alignment.center,
+                child: Text(
+                  '© 2025 Virtus. Todos os direitos reservados.',
+                  style: TextStyle(
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                    fontSize: 12
+                  ),
+                ),
+              )
             ],
           ),
         ),
