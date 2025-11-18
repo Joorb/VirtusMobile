@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'produto.dart';
+import 'produtocard.dart';
 
 void main() {
   runApp(const VirtusApp());
@@ -6,6 +8,7 @@ void main() {
 
 class VirtusApp extends StatelessWidget {
   const VirtusApp({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,28 +31,12 @@ class VirtusApp extends StatelessWidget {
                 ),
                 SizedBox(width: 30),
                 IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Feminino',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
-                  ),
-                ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ProdutoPage()),
+    );
+                  },
                   icon: Icon(
                     Icons.arrow_forward_ios_rounded,
                     color: Colors.black,
@@ -83,7 +70,7 @@ class VirtusApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  'Feminino',
+                  'Esporte',
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w600
@@ -104,7 +91,28 @@ class VirtusApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  'Feminino',
+                  'Infantil',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600
+                  ),
+                ),
+                SizedBox(width: 30),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.black,
+                  )
+                )
+                ]
+            ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  'Marcas',
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w600
@@ -230,257 +238,43 @@ class VirtusApp extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      ),
-
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      )
-                    ],
-                    )
-                )
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 1',
+                    precoVista: 'R\$ 100,00 à vista',
+                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                  ),
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 2',
+                    precoVista: 'R\$ 150,00 à vista',
+                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                  ),
+                ],
+              ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      ),
-
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      )
-                    ],
-                    )
-                )
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 1',
+                    precoVista: 'R\$ 100,00 à vista',
+                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                  ),
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 2',
+                    precoVista: 'R\$ 150,00 à vista',
+                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                  ),
+                ],
+              ),
               ),
 
               SizedBox(height: 50),
@@ -554,258 +348,44 @@ class VirtusApp extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      ),
-
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      )
-                    ],
-                    )
-                )
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 1',
+                    precoVista: 'R\$ 100,00 à vista',
+                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                  ),
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 2',
+                    precoVista: 'R\$ 150,00 à vista',
+                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                  ),
+                ],
+              ),
               ),
 
               Padding(
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      ),
-
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      )
-                    ],
-                    )
-                )
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 1',
+                    precoVista: 'R\$ 100,00 à vista',
+                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                  ),
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 2',
+                    precoVista: 'R\$ 150,00 à vista',
+                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                  ),
+                ],
+              ),
               ),
 
               SizedBox(height: 30),
@@ -829,259 +409,46 @@ class VirtusApp extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      ),
-
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      )
-                    ],
-                    )
-                )
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 1',
+                    precoVista: 'R\$ 100,00 à vista',
+                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                  ),
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 2',
+                    precoVista: 'R\$ 150,00 à vista',
+                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                  ),
+                ],
               ),
-
+              ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      ),
-
-                      Container(
-                        width: 230,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(179, 177, 177, 1),
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child:Column(
-                          children: [
-
-                            ClipRRect(
-                              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
-                            child: SizedBox(
-                              width: 230,
-                              height: 190,
-                              child: Image.asset(
-                              'img/produto.jpg',
-                              fit: BoxFit.cover,
-                              ),
-                            ),
-                            ),
-                            Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Container(
-                                padding: const EdgeInsets.all(12),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Descrição do produto',
-                                      style: TextStyle(
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    SizedBox(height:10),
-                                    Text(
-                                      'R\$ xxx,xx a vista',
-                                      style: TextStyle(
-                                        color: Color.fromRGBO(9, 11, 84, 1),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15
-                                      ),
-                                    ),
-                                    Text(
-                                      'R\$ xxx.xx parcelado em ate x vezes',
-                                        style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ]
-                                )
-                              ),
-                            )
-                          ]
-                        )
-                      )
-                    ],
-                    )
-                )
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 1',
+                    precoVista: 'R\$ 100,00 à vista',
+                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                  ),
+                  ProdutoCard(
+                    imagem: 'img/produto.jpg',
+                    descricao: 'Produto 2',
+                    precoVista: 'R\$ 150,00 à vista',
+                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                  ),
+                ],
               ),
+              ),
+
+              SizedBox(height: 30),
 
               SizedBox(height: 70),
               
