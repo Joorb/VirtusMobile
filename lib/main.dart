@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'produto.dart';
 import 'produtocard.dart';
+import 'categoria.dart';
 
 void main() {
   runApp(const VirtusApp());
@@ -16,119 +17,101 @@ class VirtusApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
       endDrawer: Drawer(
-        child: Column(
-          children: [
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
+        child: Builder(
+          builder: (context) => Column(
+            children: [
+              SizedBox(height: 30),
+              ListTile(
+                title: Text(
                   'Feminino',
                   style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
                   ),
                 ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => ProdutoPage()),
-    );
-                  },
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                title: Text(
                   'Masculino',
                   style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
                   ),
                 ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                title: Text(
                   'Esporte',
                   style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
                   ),
                 ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                title: Text(
                   'Infantil',
                   style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
                   ),
                 ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                title: Text(
                   'Marcas',
                   style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
                   ),
                 ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
-          ],
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
       backgroundColor: Colors.white,

@@ -7,119 +7,20 @@ class ProdutoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            endDrawer: Drawer(
+          endDrawer: Drawer(
         child: Column(
           children: [
             SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(
-                  'Feminino',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
-                  ),
-                ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => ProdutoPage()),
-    );
-                  },
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
+              ListTile(
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black,),
+                title: Text('Femininino'),
+              )
+              ]
             ),
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Masculino',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
-                  ),
-                ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Esporte',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
-                  ),
-                ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Infantil',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
-                  ),
-                ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Marcas',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
-                  ),
-                ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.black,
-                  )
-                )
-                ]
-            ),
+
           ],
         ),
       ),

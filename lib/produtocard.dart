@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'produto.dart'; // Sua página de produto
+import 'produto.dart';
 
 class ProdutoCard extends StatelessWidget {
   final String imagem;
@@ -18,7 +18,7 @@ class ProdutoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   return MouseRegion(
-  cursor: SystemMouseCursors.click, // muda o cursor para "mãozinha"
+  cursor: SystemMouseCursors.click,
   child: GestureDetector(
     onTap: () {
       Navigator.push(
