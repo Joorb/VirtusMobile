@@ -1,4 +1,4 @@
-# Aplicativo Mobile da Virtus
+# Aplicativo Mobile Virtus
 
 Aplicativo mobile do grupo 2 de TCC em Desenvolvimento de Sistemas da ETEC Basilides de Godoy
 
