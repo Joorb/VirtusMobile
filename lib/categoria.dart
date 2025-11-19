@@ -221,36 +221,16 @@ class CategoriaPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                    imagem: 'img/produto1.1.jpg',
+                    descricao: 'Top Adidas Suporte Leve Colorblock Feminino - Roxo',
+                    precoVista: 'R\$ 153,42 à vista',
+                    precoParcelado: 'R\$ 161,49 em até 2x sem juros',
                   ),
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
-                  ),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                    imagem: 'img/produto2.1.jpg',
+                    descricao: 'Top Nike Dri-FIT Swoosh Bra Média Sustentação - Preto+Branco',
+                    precoVista: 'R\$ 139,99 à vista',
+                    precoParcelado: 'R\$ 147,36 em até 2x sem juros',
                   ),
                 ],
               ),
@@ -261,36 +241,16 @@ class CategoriaPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                    imagem: 'img/produto3.1.jpg',
+                    descricao: 'Calça Legging Adidas Essentials 3 Listras Feminina - Preto+Branco',
+                    precoVista: 'R\$ 161,91 à vista',
+                    precoParcelado: 'R\$ 179,90 em até 2x sem juros',
                   ),
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
-                  ),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                    imagem: 'img/produto4.1.jpg',
+                    descricao: 'Camisa Palmeiras III 25/26 s/n Torcedor Puma Masculina - Amarelo',
+                    precoVista: 'R\$ 380,00 à vista',
+                    precoParcelado: 'R\$ 400,00 em até 5x sem juros',
                   ),
                 ],
               ),
@@ -301,36 +261,16 @@ class CategoriaPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                    imagem: 'img/produto5.1.jpg',
+                    descricao: 'Camisa Flamengo III 25/26 Torcedor Adidas Masculina - Off White',
+                    precoVista: 'R\$ 380,00 à vista',
+                    precoParcelado: 'R\$ 400,00 em até 5x sem juros',
                   ),
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
-                  ),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                    imagem: 'img/produto6.1.jpg',
+                    descricao: 'Chuteira Nike Zoom Vapor 15 Academy Infantil Futsal - Rosa',
+                    precoVista: 'R\$ 237,49 à vista',
+                    precoParcelado: 'R\$ 249,99 em até 3x sem juros',
                   ),
                 ],
               ),
@@ -341,16 +281,36 @@ class CategoriaPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                    imagem: 'img/produto7.1.jpg',
+                    descricao: 'Chuteira Campo Adidas Predator 24 0 Unissex - Roxo',
+                    precoVista: 'R\$ 959,99 à vista',
+                    precoParcelado: 'R\$ 999,99 em até 10x sem juros',
                   ),
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                    imagem: 'img/produto8.1.jpg',
+                    descricao: 'Tênis Asics Gel Rebound Unissex 2025 - Azul e Branco  ',
+                    precoVista: 'R\$ 284,90 à vista',
+                    precoParcelado: 'R\$ 299,90 em até 2x sem juros',
+                  ),
+                ],
+              ),
+              ),
+                            Padding(
+                padding: const EdgeInsets.fromLTRB(12, 30, 12, 12),
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ProdutoCard(
+                    imagem: 'img/produto1.1.jpg',
+                    descricao: 'Top Adidas Suporte Leve Colorblock Feminino - Roxo',
+                    precoVista: 'R\$ 153,42 à vista',
+                    precoParcelado: 'R\$ 161,49 em até 2x sem juros',
+                  ),
+                  ProdutoCard(
+                    imagem: 'img/produto2.1.jpg',
+                    descricao: 'Top Nike Dri-FIT Swoosh Bra Média Sustentação - Preto+Branco',
+                    precoVista: 'R\$ 139,99 à vista',
+                    precoParcelado: 'R\$ 147,36 em até 2x sem juros',
                   ),
                 ],
               ),
@@ -361,16 +321,56 @@ class CategoriaPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                    imagem: 'img/produto3.1.jpg',
+                    descricao: 'Calça Legging Adidas Essentials 3 Listras Feminina - Preto+Branco',
+                    precoVista: 'R\$ 161,91 à vista',
+                    precoParcelado: 'R\$ 179,90 em até 2x sem juros',
                   ),
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                    imagem: 'img/produto4.1.jpg',
+                    descricao: 'Camisa Palmeiras III 25/26 s/n Torcedor Puma Masculina - Amarelo',
+                    precoVista: 'R\$ 380,00 à vista',
+                    precoParcelado: 'R\$ 400,00 em até 5x sem juros',
+                  ),
+                ],
+              ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ProdutoCard(
+                    imagem: 'img/produto5.1.jpg',
+                    descricao: 'Camisa Flamengo III 25/26 Torcedor Adidas Masculina - Off White',
+                    precoVista: 'R\$ 380,00 à vista',
+                    precoParcelado: 'R\$ 400,00 em até 5x sem juros',
+                  ),
+                  ProdutoCard(
+                    imagem: 'img/produto6.1.jpg',
+                    descricao: 'Chuteira Nike Zoom Vapor 15 Academy Infantil Futsal - Rosa',
+                    precoVista: 'R\$ 237,49 à vista',
+                    precoParcelado: 'R\$ 249,99 em até 3x sem juros',
+                  ),
+                ],
+              ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ProdutoCard(
+                    imagem: 'img/produto7.1.jpg',
+                    descricao: 'Chuteira Campo Adidas Predator 24 0 Unissex - Roxo',
+                    precoVista: 'R\$ 959,99 à vista',
+                    precoParcelado: 'R\$ 999,99 em até 10x sem juros',
+                  ),
+                  ProdutoCard(
+                    imagem: 'img/produto8.1.jpg',
+                    descricao: 'Tênis Asics Gel Rebound Unissex 2025 - Azul e Branco  ',
+                    precoVista: 'R\$ 284,90 à vista',
+                    precoParcelado: 'R\$ 299,90 em até 2x sem juros',
                   ),
                 ],
               ),
@@ -538,42 +538,6 @@ class CategoriaPage extends StatelessWidget {
                 ),
               )
           ],
-        ),
-      ),
-    );
-  }
-}
-
-
-class CategoriaCard extends StatelessWidget {
-  final String titulo;
-  final VoidCallback onTap;
-
-  const CategoriaCard({
-    super.key,
-    required this.titulo,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: double.infinity,
-        padding: EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          color: Color.fromRGBO(248, 247, 247, 1),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Color.fromRGBO(179, 177, 177, 1)),
-        ),
-        child: Text(
-          titulo,
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-            color: Colors.black,
-          ),
         ),
       ),
     );
