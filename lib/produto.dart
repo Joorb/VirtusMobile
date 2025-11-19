@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'produtocard.dart';
+import 'main.dart';
+import 'categoria.dart';
 
 class ProdutoPage extends StatelessWidget {
   const ProdutoPage({super.key});
@@ -8,20 +10,101 @@ class ProdutoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
           endDrawer: Drawer(
-        child: Column(
-          children: [
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
+        child: Builder(
+          builder: (context) => Column(
+            children: [
+              SizedBox(height: 30),
               ListTile(
-                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black,),
-                title: Text('Femininino'),
-              )
-              ]
-            ),
-
-          ],
+                title: Text(
+                  'Feminino',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                title: Text(
+                  'Masculino',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                title: Text(
+                  'Esporte',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                title: Text(
+                  'Infantil',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                title: Text(
+                  'Marcas',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
       appBar: PreferredSize(
@@ -43,9 +126,19 @@ class ProdutoPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image.asset(
-                        'assets/img/logo.png',
-                        height: 32,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(builder: (context) => VirtusApp()),
+                            );
+                          },
+                        child: Image.asset(
+                          'assets/img/logo.png',
+                          height: 32,
+                        ),
+                      ),
                       ),
                       Row(
                         children: [
@@ -107,7 +200,7 @@ class ProdutoPage extends StatelessWidget {
                 children: [
                   SizedBox(height: 30),
                   Text(
-                    'Nome do Produto',
+                    'Top Adidas Suporte Leve Colorblock Feminino - Roxo',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -115,7 +208,7 @@ class ProdutoPage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Tipo do produto',
+                    'Tipo: Roupa',
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.black,
@@ -123,7 +216,7 @@ class ProdutoPage extends StatelessWidget {
                   ),
                   SizedBox(height: 12),
                   Text(
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie sem met',
+                    'Especificação: Roupa Feminina',
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.black,
@@ -131,7 +224,7 @@ class ProdutoPage extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'R\$ xxx,xx à vista ou',
+                    'R\$ 153,42 à vista ou',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.black,
@@ -139,7 +232,7 @@ class ProdutoPage extends StatelessWidget {
                     ),
                   ),        
                   Text(
-                    'R\$ xxx,xx parcelado em até x vezes',
+                    'R\$ 161,49 em até 2x sem juros',
                     style: TextStyle(fontSize: 14),
                   ),
 
@@ -149,7 +242,7 @@ class ProdutoPage extends StatelessWidget {
                     width: double.infinity,
                     height: 300,
                     child: Image.asset(
-                    'img/produto.jpg',
+                    'img/produto1.1.jpg',
                     fit: BoxFit.cover,
                     ),
                   ),
@@ -159,7 +252,10 @@ class ProdutoPage extends StatelessWidget {
                   Container(
                     width: 100,
                     height: 100,
-                    color: Color.fromRGBO(140, 140, 140, 1),
+                    child: Image.asset(
+                    'img/produto1.2.jpg',
+                    fit: BoxFit.cover,
+                    ),
                   )
                 ],
               ),
@@ -188,16 +284,16 @@ class ProdutoPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                    imagem: 'img/produto3.1.jpg',
+                    descricao: 'Calça Legging Adidas Essentials 3 Listras Feminina - Preto+Branco',
+                    precoVista: 'R\$ 161,91 à vista',
+                    precoParcelado: 'R\$ 179,90 em até 2x sem juros',
                   ),
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                    imagem: 'img/produto4.1.jpg',
+                    descricao: 'Camisa Palmeiras III 25/26 s/n Torcedor Puma Masculina - Amarelo',
+                    precoVista: 'R\$ 380,00 à vista',
+                    precoParcelado: 'R\$ 400,00 em até 5x sem juros',
                   ),
                 ],
               ),
@@ -208,16 +304,16 @@ class ProdutoPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                    imagem: 'img/produto5.1.jpg',
+                    descricao: 'Camisa Flamengo III 25/26 Torcedor Adidas Masculina - Off White',
+                    precoVista: 'R\$ 380,00 à vista',
+                    precoParcelado: 'R\$ 400,00 em até 5x sem juros',
                   ),
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                    imagem: 'img/produto6.1.jpg',
+                    descricao: 'Chuteira Nike Zoom Vapor 15 Academy Infantil Futsal - Rosa',
+                    precoVista: 'R\$ 237,49 à vista',
+                    precoParcelado: 'R\$ 249,99 em até 3x sem juros',
                   ),
                 ],
               ),
@@ -228,16 +324,16 @@ class ProdutoPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                    imagem: 'img/produto7.1.jpg',
+                    descricao: 'Chuteira Campo Adidas Predator 24 0 Unissex - Roxo',
+                    precoVista: 'R\$ 959,99 à vista',
+                    precoParcelado: 'R\$ 999,99 em até 10x sem juros',
                   ),
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                    imagem: 'img/produto8.1.jpg',
+                    descricao: 'Tênis Asics Gel Rebound Unissex 2025 - Azul e Branco  ',
+                    precoVista: 'R\$ 284,90 à vista',
+                    precoParcelado: 'R\$ 299,90 em até 2x sem juros',
                   ),
                 ],
               ),
@@ -248,40 +344,21 @@ class ProdutoPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
+                    imagem: 'img/produto1.1.jpg',
+                    descricao: 'Top Adidas Suporte Leve Colorblock Feminino - Roxo',
+                    precoVista: 'R\$ 153,42 à vista',
+                    precoParcelado: 'R\$ 161,49 em até 2x sem juros',
                   ),
                   ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
+                    imagem: 'img/produto2.1.jpg',
+                    descricao: 'Top Nike Dri-FIT Swoosh Bra Média Sustentação - Preto+Branco',
+                    precoVista: 'R\$ 139,99 à vista',
+                    precoParcelado: 'R\$ 147,36 em até 2x sem juros',
                   ),
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 1',
-                    precoVista: 'R\$ 100,00 à vista',
-                    precoParcelado: 'R\$ 10,00 parcelado em até x vezes',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto.jpg',
-                    descricao: 'Produto 2',
-                    precoVista: 'R\$ 150,00 à vista',
-                    precoParcelado: 'R\$ 15,00 parcelado em até x vezes',
-                  ),
-                ],
-              ),
-            ),
+
 
             SizedBox(height: 100),
 
