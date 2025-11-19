@@ -1,3 +1,6 @@
-# flutter_virtus
+# Aplicativo Mobile Virtus
 
-A new Flutter project.
+Aplicativo mobile do grupo 2 de TCC em Desenvolvimento de Sistemas da ETEC Basilides de Godoy
+
+Desenvolvimento de um aplicativo de exibição de produtos para um ecommerce de artigos esportivos 
+
