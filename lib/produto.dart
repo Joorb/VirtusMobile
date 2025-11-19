@@ -399,21 +399,21 @@ class ProdutoPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Endereço: blablabla blabla',
+                              'Endereço: Rua Camândulas n°112',
                               style: TextStyle(
                                 color: Color.fromRGBO(255, 255, 255, 1),
                                 fontSize: 14,
                               ),
                             ),
                             Text(
-                              'Telefone: xxxxxxxx',
+                              'Telefone: +55 (11)991103232',
                               style: TextStyle(
                                 color: Color.fromRGBO(255, 255, 255, 1),
                                 fontSize: 14,
                               ),
                             ),
                             Text(
-                              'Email: blablabla@gmail.com',
+                              'Email: virtuscomercio3@gmail.com',
                               style: TextStyle(
                                 color: Color.fromRGBO(255, 255, 255, 1),
                                 fontSize: 14,
