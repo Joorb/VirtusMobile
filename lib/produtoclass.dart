@@ -1,43 +1,41 @@
 class Produto {
-  late String nome;
-  late String tipo;
-  late String especificacao;
-  late String precoVista;
-  late String precoParcelado;
-  late String img1;
-  late String img2;
+  final String nome;
+  final String tipo;
+  final String especificacao;
+  final String precoVista;
+  final String precoParcelado;
+  final String img1;
+  final String img2;
 
-  Produto()
-  {
-    nome = "";
-    tipo = "";
-    especificacao = "";
-    precoVista = "";
-    precoParcelado = "";
-    img1 = "";
-    img2 = "";
-  }
+Produto({
+  required this.nome,
+  required this.tipo,
+  required this.especificacao,
+  required this.precoVista,
+  required this.precoParcelado,
+  required this.img1,
+  required this.img2
+});
 
-Produto.v(this.nome, this.tipo, this.especificacao, this.precoVista, this.precoParcelado, this.img1, this.img2);
-
-
-
-Produto.fromJson(Map<String, dynamic> json)
-  : nome = json['nome'] as String,
-    tipo = json['tipo'] as String,
-    especificacao = json['especificacao'] as String,
-    precoVista = json['tipo'] as String,
-    precoParcelado = json['tipo'] as String,
-    img1 = json['img1'] as String,
-    img2 = json['img2'] as String;
+factory Produto.fromJson(Map<String, dynamic> json){
+  return Produto(
+    nome : json['nome'] as String,
+    tipo : json['tipo'] as String,
+    especificacao : json['especificacao'] as String,
+    precoVista : json['precoVista'] as String,
+    precoParcelado : json['precoParcelado'] as String,
+    img1 : json['img1'] as String,
+    img2 : json['img2'] as String,
+  );
+}
 
   Map<String, dynamic> toJson() => {
     'nome': nome,
     'tipo': tipo,
     'especificacao': especificacao,
-    'precoparcelado': precoParcelado,
-    'precovista': precoVista,
+    'precoParcelado': precoParcelado,
+    'precoVista': precoVista,
     'img1': img1,
     'img2': img2,
-    };
+  };
 }

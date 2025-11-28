@@ -18,7 +18,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-  - assets/produtos.json
-  - assets/imgproduto.json
+  - assets/produto.json
   - assets/img/
-  - assets/img/produto.jpg

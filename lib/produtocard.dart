@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
 import 'produto.dart';
+import 'produtoclass.dart';
 
 class ProdutoCard extends StatelessWidget {
-  final String imagem;
-  final String descricao;
-  final String precoVista;
-  final String precoParcelado;
+  final Produto produto;
 
-  const ProdutoCard({
-    super.key,
-    required this.imagem,
-    required this.descricao,
-    required this.precoVista,
-    required this.precoParcelado,
-  });
+
+  const ProdutoCard({super.key, required this.produto});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +37,7 @@ class ProdutoCard extends StatelessWidget {
                 width: 210,
                 height: 180,
                 child: Image.asset(
-                  imagem,
+                  produto.img1,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -57,14 +50,14 @@ class ProdutoCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      descricao,
+                      produto.nome,
                       style: TextStyle(
                         fontSize: 15
                       ),
                     ),
                     SizedBox(height: 10),
                     Text(
-                      precoVista,
+                      produto.precoVista,
                       style: TextStyle(
                         color: Color.fromRGBO(9, 11, 84, 1),
                         fontWeight: FontWeight.w600,
@@ -72,7 +65,7 @@ class ProdutoCard extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      precoParcelado,
+                      produto.precoParcelado,
                       style: TextStyle(
                         fontSize: 12
                       ),
