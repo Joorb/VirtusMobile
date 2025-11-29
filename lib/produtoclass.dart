@@ -22,8 +22,8 @@ factory Produto.fromJson(Map<String, dynamic> json){
     nome : json['nome'] as String,
     tipo : json['tipo'] as String,
     especificacao : json['especificacao'] as String,
-    precoVista : json['precoVista'] as String,
-    precoParcelado : json['precoParcelado'] as String,
+    precoVista : json['precovista'] as String,
+    precoParcelado : json['precoparcelado'] as String,
     img1 : json['img1'] as String,
     img2 : json['img2'] as String,
   );
@@ -33,8 +33,8 @@ factory Produto.fromJson(Map<String, dynamic> json){
     'nome': nome,
     'tipo': tipo,
     'especificacao': especificacao,
-    'precoParcelado': precoParcelado,
-    'precoVista': precoVista,
+    'precoparcelado': precoParcelado,
+    'precovista': precoVista,
     'img1': img1,
     'img2': img2,
   };

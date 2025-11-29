@@ -11,6 +11,7 @@ class ProdutoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   return MouseRegion(
+    
   cursor: SystemMouseCursors.click,
   child: GestureDetector(
     onTap: () {

@@ -3,18 +3,58 @@ import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'produtocard.dart';
 import 'categoria.dart';
+import 'produtoclass.dart';
 
 void main() {
   runApp(const VirtusApp());
 }
 
-class VirtusApp extends StatelessWidget {
+List<Produto> produto = [];
+
+class VirtusApp extends StatefulWidget {
   const VirtusApp({super.key});
 
+  @override
+  State<VirtusApp> createState() => _VirtusAppState();
+}
+
+class _VirtusAppState extends State<VirtusApp> {
+  Future<List<Produto>> loadProdutos() async {
+    final String response = await rootBundle.loadString('assets/produto.json');
+    Iterable data = json.decode(response);
+    return List<Produto>.from(data.map((model) => Produto.fromJson(model)));
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return FutureBuilder(
+      future: loadProdutos(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          return MaterialApp(
+            home: Scaffold(
+              body: Center(
+                child: CircularProgressIndicator(),
+              ),
+            ),
+          );
+        }
+
+        produto = snapshot.data!;
+
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: HomePage(),
+        );
+      },
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
       endDrawer: Drawer(
@@ -224,19 +264,9 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto1.1.jpg',
-                    descricao: 'Top Adidas Suporte Leve Colorblock Feminino - Roxo',
-                    precoVista: 'R\$ 153,42 à vista',
-                    precoParcelado: 'R\$ 161,49 em até 2x sem juros',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto2.1.jpg',
-                    descricao: 'Top Nike Dri-FIT Swoosh Bra Média Sustentação - Preto+Branco',
-                    precoVista: 'R\$ 139,99 à vista',
-                    precoParcelado: 'R\$ 147,36 em até 2x sem juros',
-                  ),
+                children: [
+                  ProdutoCard(produto: produto[0]),
+                  ProdutoCard(produto: produto[1]),
                 ],
               ),
               ),
@@ -244,19 +274,9 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto3.1.jpg',
-                    descricao: 'Calça Legging Adidas Essentials 3 Listras Feminina - Preto+Branco',
-                    precoVista: 'R\$ 161,91 à vista',
-                    precoParcelado: 'R\$ 179,90 em até 2x sem juros',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto4.1.jpg',
-                    descricao: 'Camisa Palmeiras III 25/26 s/n Torcedor Puma Masculina - Amarelo',
-                    precoVista: 'R\$ 380,00 à vista',
-                    precoParcelado: 'R\$ 400,00 em até 5x sem juros',
-                  ),
+                children: [
+                  ProdutoCard(produto: produto[0]),
+                  ProdutoCard(produto: produto[0]),
                 ],
               ),
               ),
@@ -334,19 +354,9 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto5.1.jpg',
-                    descricao: 'Camisa Flamengo III 25/26 Torcedor Adidas Masculina - Off White',
-                    precoVista: 'R\$ 380,00 à vista',
-                    precoParcelado: 'R\$ 400,00 em até 5x sem juros',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto6.1.jpg',
-                    descricao: 'Chuteira Nike Zoom Vapor 15 Academy Infantil Futsal - Rosa',
-                    precoVista: 'R\$ 237,49 à vista',
-                    precoParcelado: 'R\$ 249,99 em até 3x sem juros',
-                  ),
+                children: [
+                  ProdutoCard(produto: produto[0]),
+                  ProdutoCard(produto: produto[0]),
                 ],
               ),
               ),
@@ -355,19 +365,9 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto7.1.jpg',
-                    descricao: 'Chuteira Campo Adidas Predator 24 0 Unissex - Roxo',
-                    precoVista: 'R\$ 959,99 à vista',
-                    precoParcelado: 'R\$ 999,99 em até 10x sem juros',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto8.1.jpg',
-                    descricao: 'Tênis Asics Gel Rebound Unissex 2025 - Azul e Branco  ',
-                    precoVista: 'R\$ 284,90 à vista',
-                    precoParcelado: 'R\$ 299,90 em até 2x sem juros',
-                  ),
+                children: [
+                  ProdutoCard(produto: produto[0]),
+                  ProdutoCard(produto: produto[0]),
                 ],
               ),
               ),
@@ -395,19 +395,9 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto1.1.jpg',
-                    descricao: 'Top Adidas Suporte Leve Colorblock Feminino - Roxo',
-                    precoVista: 'R\$ 153,42 à vista',
-                    precoParcelado: 'R\$ 161,49 em até 2x sem juros',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto2.1.jpg',
-                    descricao: 'Top Nike Dri-FIT Swoosh Bra Média Sustentação - Preto+Branco',
-                    precoVista: 'R\$ 139,99 à vista',
-                    precoParcelado: 'R\$ 147,36 em até 2x sem juros',
-                  ),
+                children: [
+                  ProdutoCard(produto: produto[0]),
+                  ProdutoCard(produto: produto[0]),
                 ],
               ),
               ),
@@ -415,19 +405,9 @@ class VirtusApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ProdutoCard(
-                    imagem: 'img/produto3.1.jpg',
-                    descricao: 'Calça Legging Adidas Essentials 3 Listras Feminina - Preto+Branco',
-                    precoVista: 'R\$ 161,91 à vista',
-                    precoParcelado: 'R\$ 179,90 em até 2x sem juros',
-                  ),
-                  ProdutoCard(
-                    imagem: 'img/produto4.1.jpg',
-                    descricao: 'Camisa Palmeiras III 25/26 s/n Torcedor Puma Masculina - Amarelo',
-                    precoVista: 'R\$ 380,00 à vista',
-                    precoParcelado: 'R\$ 400,00 em até 5x sem juros',
-                  ),
+                children: [
+                  ProdutoCard(produto: produto[0]),
+                  ProdutoCard(produto: produto[0]),
                 ],
               ),
               ),
@@ -599,6 +579,6 @@ class VirtusApp extends StatelessWidget {
           ),
         ),
       ),
-    );
+     );
   }
 }
