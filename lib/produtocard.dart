@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'produto.dart';
 import 'produtoclass.dart';
-
+import 'main.dart';
 class ProdutoCard extends StatelessWidget {
   final Produto produto;
 
@@ -17,7 +17,8 @@ class ProdutoCard extends StatelessWidget {
     onTap: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => ProdutoPage()),
+        MaterialPageRoute(builder: (context) => ProdutoPage(produto: produto,
+        listaMaisVendidos: maisVendidos,)),
       );
     },
       child: Container(

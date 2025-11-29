@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'produtocard.dart';
 import 'main.dart';
 import 'categoria.dart';
+import 'produtoclass.dart';
+import 'widget/exibirprod.dart';
 
 class ProdutoPage extends StatelessWidget {
-  const ProdutoPage({super.key});
+  final Produto produto;
+  final List<Produto> listaMaisVendidos;
+
+  const ProdutoPage({super.key, required this.produto, required this.listaMaisVendidos});
 
   @override
   Widget build(BuildContext context) {
@@ -71,24 +76,6 @@ class ProdutoPage extends StatelessWidget {
               ListTile(
                 title: Text(
                   'Infantil',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
-                  ),
-                ),
-                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
-                  );
-                },
-              ),
-              SizedBox(height: 10),
-              ListTile(
-                title: Text(
-                  'Marcas',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
@@ -200,7 +187,7 @@ class ProdutoPage extends StatelessWidget {
                 children: [
                   SizedBox(height: 30),
                   Text(
-                    'Top Adidas Suporte Leve Colorblock Feminino - Roxo',
+                    produto.nome,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -208,7 +195,7 @@ class ProdutoPage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Tipo: Roupa',
+                    'Tipo: ${produto.tipo}',
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.black,
@@ -216,7 +203,7 @@ class ProdutoPage extends StatelessWidget {
                   ),
                   SizedBox(height: 12),
                   Text(
-                    'Especificação: Roupa Feminina',
+                    'Especificação: ${produto.especificacao}',
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.black,
@@ -224,7 +211,7 @@ class ProdutoPage extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'R\$ 153,42 à vista ou',
+                    produto.precoVista,
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.black,
@@ -232,28 +219,28 @@ class ProdutoPage extends StatelessWidget {
                     ),
                   ),        
                   Text(
-                    'R\$ 161,49 em até 2x sem juros',
+                    produto.precoParcelado,
                     style: TextStyle(fontSize: 14),
                   ),
 
                   SizedBox(height: 30),
 
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 300,
                     child: Image.asset(
-                    'img/produto1.1.jpg',
+                    produto.img1,
                     fit: BoxFit.cover,
                     ),
                   ),
 
                   SizedBox(height: 30),
                   
-                  Container(
+                  SizedBox(
                     width: 100,
                     height: 100,
                     child: Image.asset(
-                    'img/produto1.2.jpg',
+                    produto.img2,
                     fit: BoxFit.cover,
                     ),
                   )
@@ -278,46 +265,7 @@ class ProdutoPage extends StatelessWidget {
             
             SizedBox(height: 30),
 
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
-                ],
-              ),
-            ),
+            exibirprod(listaMaisVendidos),
 
 
             SizedBox(height: 100),

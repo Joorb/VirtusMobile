@@ -84,24 +84,6 @@ class CategoriaPage extends StatelessWidget {
                   );
                 },
               ),
-              SizedBox(height: 10),
-              ListTile(
-                title: Text(
-                  'Marcas',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
-                  ),
-                ),
-                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
-                  );
-                },
-              ),
             ],
           ),
         ),

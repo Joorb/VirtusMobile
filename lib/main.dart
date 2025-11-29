@@ -4,13 +4,16 @@ import 'package:flutter/material.dart';
 import 'produtocard.dart';
 import 'categoria.dart';
 import 'produtoclass.dart';
+import 'widget/exibirprod.dart';
 
 void main() {
   runApp(const VirtusApp());
 }
 
 List<Produto> produto = [];
-
+List<Produto> maisVendidos = produto.take(4).toList();
+List<Produto> lancamentos = produto.skip(4).take(4).toList();
+List<Produto> recomendados = produto.skip(8).take(4).toList();
 
 class VirtusApp extends StatefulWidget {
   const VirtusApp({super.key});
@@ -42,10 +45,6 @@ class _VirtusAppState extends State<VirtusApp> {
         }
 
         produto = snapshot.data!;
-        
-        List<Produto> maisVendidos = produto.take(4).toList();
-        List<Produto> lancamentos = produto.skip(4).take(4).toList();
-        List<Produto> recomendados = produto.skip(8).take(4).toList();
 
 
         return MaterialApp(
@@ -74,27 +73,6 @@ class HomePage extends StatelessWidget {
     required this.listaRecomendados,
   }) : super(key: key);
 
-  Widget exibirprod(List<Produto> lista) {
-  List<Widget> rows = [];
-
-  for (int i = 0; i < lista.length; i += 2) {
-    rows.add(
-      Padding(
-        padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            ProdutoCard(produto: lista[i]),
-            if (i + 1 < lista.length)
-              ProdutoCard(produto: lista[i + 1]),
-          ],
-        ),
-      ),
-    );
-  }
-
-  return Column(children: rows);
-  }
 
 
   @override
@@ -164,24 +142,6 @@ class HomePage extends StatelessWidget {
               ListTile(
                 title: Text(
                   'Infantil',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
-                  ),
-                ),
-                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
-                  );
-                },
-              ),
-              SizedBox(height: 10),
-              ListTile(
-                title: Text(
-                  'Marcas',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
