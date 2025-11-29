@@ -11,6 +11,7 @@ void main() {
 
 List<Produto> produto = [];
 
+
 class VirtusApp extends StatefulWidget {
   const VirtusApp({super.key});
 
@@ -41,10 +42,19 @@ class _VirtusAppState extends State<VirtusApp> {
         }
 
         produto = snapshot.data!;
+        
+        List<Produto> maisVendidos = produto.take(4).toList();
+        List<Produto> lancamentos = produto.skip(4).take(4).toList();
+        List<Produto> recomendados = produto.skip(8).take(4).toList();
+
 
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: HomePage(),
+          home: HomePage(
+                listaMaisVendidos: maisVendidos,
+                listaLancamentos: lancamentos,
+                listaRecomendados: recomendados,
+          ),
         );
       },
     );
@@ -52,6 +62,41 @@ class _VirtusAppState extends State<VirtusApp> {
 }
 
 class HomePage extends StatelessWidget {
+  
+  final List<Produto> listaMaisVendidos;
+  final List<Produto> listaLancamentos;
+  final List<Produto> listaRecomendados;
+
+  const HomePage({
+    Key? key,
+    required this.listaMaisVendidos,
+    required this.listaLancamentos,
+    required this.listaRecomendados,
+  }) : super(key: key);
+
+  Widget exibirprod(List<Produto> lista) {
+  List<Widget> rows = [];
+
+  for (int i = 0; i < lista.length; i += 2) {
+    rows.add(
+      Padding(
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ProdutoCard(produto: lista[i]),
+            if (i + 1 < lista.length)
+              ProdutoCard(produto: lista[i + 1]),
+          ],
+        ),
+      ),
+    );
+  }
+
+  return Column(children: rows);
+  }
+
+
   @override
   Widget build(BuildContext context) {
      return MaterialApp(
@@ -260,26 +305,7 @@ class HomePage extends StatelessWidget {
 
               SizedBox(height: 30),
 
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[0]),
-                  ProdutoCard(produto: produto[1]),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[0]),
-                  ProdutoCard(produto: produto[0]),
-                ],
-              ),
-              ),
+              exibirprod(listaMaisVendidos),
 
               SizedBox(height: 50),
             
@@ -350,27 +376,7 @@ class HomePage extends StatelessWidget {
 
               SizedBox(height: 30),
 
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[0]),
-                  ProdutoCard(produto: produto[0]),
-                ],
-              ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[0]),
-                  ProdutoCard(produto: produto[0]),
-                ],
-              ),
-              ),
+              exibirprod(listaRecomendados),
 
               SizedBox(height: 30),
 
@@ -391,30 +397,9 @@ class HomePage extends StatelessWidget {
 
               SizedBox(height: 30),
 
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[0]),
-                  ProdutoCard(produto: produto[0]),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[0]),
-                  ProdutoCard(produto: produto[0]),
-                ],
-              ),
-              ),
+              exibirprod(listaLancamentos),
 
-              SizedBox(height: 30),
-
-              SizedBox(height: 70),
+              SizedBox(height: 100),
               
                 Container(
                   width: double.infinity,
@@ -430,6 +415,7 @@ class HomePage extends StatelessWidget {
                           fontSize: 16,
                         ),
                       ),
+                      SizedBox(height: 5),
                       Row(
                         children: [
                           Image.asset(

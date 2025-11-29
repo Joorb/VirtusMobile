@@ -1,9 +1,9 @@
 [
-
+    
     {
         "nome": "Top Adidas Suporte Leve Colorblock Feminino - Roxo",
         "tipo": "Roupa",
-        "especificacao": "Roupa Feminina",
+        "especificacao": "Feminina",
         "precovista": "R$ 153,42 à vista",
         "precoparcelado": "R$ 161,49 em até 2x sem juros",
         "img1": "img/produto1.1.jpg",
@@ -12,11 +12,101 @@
     {
         "nome": "Top Nike Dri-FIT Swoosh Bra Média Sustentação - Preto+Branco",
         "tipo": "Roupa",
-        "especificacao": "Roupa Feminina",
+        "especificacao": "Feminina",
         "precovista": "R$ 139,99 à vista",
         "precoparcelado": "R$ 147,36 em até 2x sem juros",
         "img1": "img/produto2.1.jpg",
         "img2": "img/produto2.2.jpg"
+    },
+    {
+        "nome": "Top Puma Fit Ultrabreathe Alta Sustentação - Azul",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 129,90 à vista",
+        "precoparcelado": "R$ 137,80 em até 2x sem juros",
+        "img1": "img/produto3.1.jpg",
+        "img2": "img/produto3.2.jpg"
+    },
+    {
+        "nome": "Top Under Armour Infinity Média Sustentação - Pink",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 159,99 à vista",
+        "precoparcelado": "R$ 168,40 em até 2x sem juros",
+        "img1": "img/produto4.1.jpg",
+        "img2": "img/produto4.2.jpg"
+    },
+    {
+        "nome": "Top Reebok Move Ready Suporte Leve - Verde Água",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 118,00 à vista",
+        "precoparcelado": "R$ 124,50 em até 2x sem juros",
+        "img1": "img/produto5.1.jpg",
+        "img2": "img/produto5.2.jpg"
+    },
+    {
+        "nome": "Top Fila Training Emana Alta Sustentação - Preto",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 146,90 à vista",
+        "precoparcelado": "R$ 154,20 em até 2x sem juros",
+        "img1": "img/produto6.1.jpg",
+        "img2": "img/produto6.2.jpg"
+    },
+    {
+        "nome": "Top Mizuno Active Stretch Média Sustentação - Coral",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 134,50 à vista",
+        "precoparcelado": "R$ 141,99 em até 2x sem juros",
+        "img1": "img/produto7.1.jpg",
+        "img2": "img/produto7.2.jpg"
+    },
+    {
+        "nome": "Top Asics MotionDry Suporte Leve - Lilás",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 125,00 à vista",
+        "precoparcelado": "R$ 132,90 em até 2x sem juros",
+        "img1": "img/produto8.1.jpg",
+        "img2": "img/produto8.2.jpg"
+    },
+    {
+        "nome": "Top Adidas Essentials Média Sustentação - Branco",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 149,90 à vista",
+        "precoparcelado": "R$ 157,00 em até 2x sem juros",
+        "img1": "img/produto1.1.jpg",
+        "img2": "img/produto1.2.jpg"
+    },
+    {
+        "nome": "Top Nike Pro Classic Suporte Leve - Cinza",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 135,00 à vista",
+        "precoparcelado": "R$ 142,80 em até 2x sem juros",
+        "img1": "img/produto2.1.jpg",
+        "img2": "img/produto2.2.jpg"
+    },
+    {
+        "nome": "Top Puma Studio Ultrabreathe - Verde",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 139,90 à vista",
+        "precoparcelado": "R$ 148,00 em até 2x sem juros",
+        "img1": "img/produto3.1.jpg",
+        "img2": "img/produto3.2.jpg"
+    },
+    {
+        "nome": "Top Under Armour Seamless Low Suporte Leve - Azul",
+        "tipo": "Roupa",
+        "especificacao": "Feminina",
+        "precovista": "R$ 152,00 à vista",
+        "precoparcelado": "R$ 160,90 em até 2x sem juros",
+        "img1": "img/produto4.1.jpg",
+        "img2": "img/produto4.2.jpg"
     }
-    
+
 ]

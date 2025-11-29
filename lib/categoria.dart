@@ -220,8 +220,8 @@ class CategoriaPage extends StatelessWidget {
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
+                  ProdutoCard(produto: produto[1]),
+                  ProdutoCard(produto: produto[1]),
                 ],
               ),
               ),
@@ -230,8 +230,8 @@ class CategoriaPage extends StatelessWidget {
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
+                  ProdutoCard(produto: produto[1]),
+                  ProdutoCard(produto: produto[1]),
                 ],
               ),
               ),
@@ -240,8 +240,8 @@ class CategoriaPage extends StatelessWidget {
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
+                  ProdutoCard(produto: produto[1]),
+                  ProdutoCard(produto: produto[1]),
                 ],
               ),
               ),
@@ -250,8 +250,8 @@ class CategoriaPage extends StatelessWidget {
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
+                  ProdutoCard(produto: produto[1]),
+                  ProdutoCard(produto: produto[1]),
                 ],
               ),
               ),
@@ -260,8 +260,8 @@ class CategoriaPage extends StatelessWidget {
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
+                  ProdutoCard(produto: produto[1]),
+                  ProdutoCard(produto: produto[1]),
                 ],
               ),
               ),
@@ -270,8 +270,8 @@ class CategoriaPage extends StatelessWidget {
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
+                  ProdutoCard(produto: produto[1]),
+                  ProdutoCard(produto: produto[1]),
                 ],
               ),
               ),
@@ -280,8 +280,8 @@ class CategoriaPage extends StatelessWidget {
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  //ProdutoCard(produto: produtos[1] ),
-                  //ProdutoCard(produto: produtos[1]),
+                  ProdutoCard(produto: produto[1] ),
+                  ProdutoCard(produto: produto[1]),
                 ],
               ),
               ),
@@ -290,8 +290,8 @@ class CategoriaPage extends StatelessWidget {
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  //ProdutoCard(produto: produtos[1]),
-                  //ProdutoCard(produto: produtos[1]),
+                  ProdutoCard(produto: produto[1]),
+                  ProdutoCard(produto: produto[1]),
                 ],
               ),
               ),
@@ -312,6 +312,7 @@ class CategoriaPage extends StatelessWidget {
                           fontSize: 16,
                         ),
                       ),
+                      SizedBox(height: 5),
                       Row(
                         children: [
                           Image.asset(

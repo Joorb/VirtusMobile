@@ -22,6 +22,7 @@ class ProdutoCard extends StatelessWidget {
     },
       child: Container(
         width: 210,
+        height: 350,
         decoration: BoxDecoration(
           border: Border.all(
             color: Color.fromRGBO(179, 177, 177, 1),

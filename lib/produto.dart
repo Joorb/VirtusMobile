@@ -336,6 +336,7 @@ class ProdutoPage extends StatelessWidget {
                           fontSize: 16,
                         ),
                       ),
+                      SizedBox(height: 5),
                       Row(
                         children: [
                           Image.asset(
