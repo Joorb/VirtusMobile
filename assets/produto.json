@@ -1,5 +1,4 @@
 [
-    
     {
         "nome": "Top Adidas Suporte Leve Colorblock Feminino - Roxo",
         "tipo": "Roupa",
@@ -19,94 +18,219 @@
         "img2": "img/produto2.2.jpg"
     },
     {
-        "nome": "Top Puma Fit Ultrabreathe Alta Sustentação - Azul",
+        "nome": "Calça Legging Adidas Essentials 3 Listras Feminina - Preto+Branco",
         "tipo": "Roupa",
-        "especificacao": "Masculino",
-        "precovista": "R$ 129,90 à vista",
-        "precoparcelado": "R$ 137,80 em até 2x sem juros",
+        "especificacao": "Feminino",
+        "precovista": "R$ 161,91 à vista",
+        "precoparcelado": "R$ 179,90 em até 2x sem juros",
         "img1": "img/produto3.1.jpg",
         "img2": "img/produto3.2.jpg"
     },
     {
-        "nome": "Top Under Armour Infinity Média Sustentação - Pink",
+        "nome": "Camisa Palmeiras III 25/26 s/n Torcedor Puma Masculina - Amarelo",
         "tipo": "Roupa",
         "especificacao": "Masculino",
-        "precovista": "R$ 159,99 à vista",
-        "precoparcelado": "R$ 168,40 em até 2x sem juros",
+        "precovista": "R$ 380,00 à vista",
+        "precoparcelado": "R$ 399,99 em até 2x sem juros",
         "img1": "img/produto4.1.jpg",
         "img2": "img/produto4.2.jpg"
     },
     {
-        "nome": "Top Reebok Move Ready Suporte Leve - Verde Água",
+        "nome": "Camisa Palmeiras III 25/26 s/n Torcedor Puma Masculina - Amarelo",
         "tipo": "Roupa",
-        "especificacao": "Unissex",
-        "precovista": "R$ 118,00 à vista",
-        "precoparcelado": "R$ 124,50 em até 2x sem juros",
+        "especificacao": "Masculino",
+        "precovista": "R$ 380,00 à vista",
+        "precoparcelado": "R$ 399,99 em até 2x sem juros",
         "img1": "img/produto5.1.jpg",
         "img2": "img/produto5.2.jpg"
     },
     {
-        "nome": "Top Fila Training Emana Alta Sustentação - Preto",
-        "tipo": "Roupa",
-        "especificacao": "Unissex",
-        "precovista": "R$ 146,90 à vista",
-        "precoparcelado": "R$ 154,20 em até 2x sem juros",
+        "nome": "Chuteira Nike Zoom Vapor 15 Academy Futsal - Rosa",
+        "tipo": "Chuteira",
+        "especificacao": "Infantil",
+        "precovista": "R$ 237,49 à vista",
+        "precoparcelado": "R$ 249,99 em até 3x sem juros",
         "img1": "img/produto6.1.jpg",
         "img2": "img/produto6.2.jpg"
     },
     {
-        "nome": "Top Mizuno Active Stretch Média Sustentação - Coral",
-        "tipo": "Roupa",
-        "especificacao": "Infantil",
-        "precovista": "R$ 134,50 à vista",
-        "precoparcelado": "R$ 141,99 em até 2x sem juros",
+        "nome": "Chuteira Campo Adidas Deportivo III Campo Unissex - Roxa",
+        "tipo": "Chuteira",
+        "especificacao": "Unissex",
+        "precovista": "R$ 189,99 à vista",
+        "precoparcelado": "R$ 199,99 em até 3x sem juros",
         "img1": "img/produto7.1.jpg",
         "img2": "img/produto7.2.jpg"
     },
     {
-        "nome": "Top Asics MotionDry Suporte Leve - Lilás",
-        "tipo": "Roupa",
-        "especificacao": "Infantil",
-        "precovista": "R$ 125,00 à vista",
-        "precoparcelado": "R$ 132,90 em até 2x sem juros",
+        "nome": "Tênis Feminino Asics Gel Rebound - Azul",
+        "tipo": "Tênis",
+        "especificacao": "Feminino",
+        "precovista": "R$ 379,79 à vista",
+        "precoparcelado": "R$ 399,99 em até 3x sem juros",
         "img1": "img/produto8.1.jpg",
         "img2": "img/produto8.2.jpg"
     },
     {
-        "nome": "Top Adidas Essentials Média Sustentação - Branco",
+        "nome": "Kit 2 Tops Puma Fitness Feminino Nadador Sem Costura - Preto+Azul claro",
         "tipo": "Roupa",
         "especificacao": "Feminino",
-        "precovista": "R$ 149,90 à vista",
-        "precoparcelado": "R$ 157,00 em até 2x sem juros",
-        "img1": "img/produto1.1.jpg",
-        "img2": "img/produto1.2.jpg"
+        "precovista": "R$ 89,90 à vista",
+        "precoparcelado": "R$ 100,00 em até 2x sem juros",
+        "img1": "img/produto9.1.png",
+        "img2": "img/produto9.2.png"
     },
     {
-        "nome": "Top Nike Pro Classic Suporte Leve - Cinza",
-        "tipo": "Roupa",
+        "nome": "Tênis Fila Recovery Feminino - Rosa+Pink",
+        "tipo": "Tênis",
         "especificacao": "Feminino",
-        "precovista": "R$ 135,00 à vista",
-        "precoparcelado": "R$ 142,80 em até 2x sem juros",
-        "img1": "img/produto2.1.jpg",
-        "img2": "img/produto2.2.jpg"
+        "precovista": "R$ 332,49 à vista",
+        "precoparcelado": "R$ 349,99 em até 5x sem juros",
+        "img1": "img/produto10.1.png",
+        "img2": "img/produto10.2.png"
     },
     {
-        "nome": "Top Puma Studio Ultrabreathe - Verde",
+        "nome": "Camisa Atlético Mineiro III 25/26 s/n Torcedor Adidas Feminina - Preto",
         "tipo": "Roupa",
         "especificacao": "Feminino",
-        "precovista": "R$ 139,90 à vista",
-        "precoparcelado": "R$ 148,00 em até 2x sem juros",
-        "img1": "img/produto3.1.jpg",
-        "img2": "img/produto3.2.jpg"
+        "precovista": "R$ 399,99 à vista",
+        "precoparcelado": "5x de R$ 80,00 sem juros",
+        "img1": "img/produto11.1.png",
+        "img2": "img/produto11.2.png"
     },
     {
-        "nome": "Top Under Armour Seamless Low Suporte Leve - Azul",
+        "nome": "Chuteira Campo Adidas Predator 24 0 Unissex - Preto+Branco",
+        "tipo": "Chuteira",
+        "especificacao": "Unissex",
+        "precovista": "R$ 233,99 à vista",
+        "precoparcelado": "R$ 259,99 em até 10x sem juros",
+        "img1": "img/produto12.1.png",
+        "img2": "img/produto12.2.png"
+    },
+    {
+        "nome": "Chuteira Campo Adidas Deportivo III Campo Unissex - Preto+Vermelho",
+        "tipo": "Chuteira",
+        "especificacao": "Masculino",
+        "precovista": "R$ 189,99 à vista",
+        "precoparcelado": "R$ 199,99 em até 2x sem juros",
+        "img1": "img/produto13.1.png",
+        "img2": "img/produto13.2.png"
+    },
+    {
+        "nome": "Tênis Adidas Adizero Boston 12 Masculino - Chumbo+Verde",
+        "tipo": "Tênis",
+        "especificacao": "Masculino",
+        "precovista": "R$ 719,99 à vista",
+        "precoparcelado": "R$ 799,99 em até 10x sem juros",
+        "img1": "img/produto14.1.jpg",
+        "img2": "img/produto14.2.jpg"
+    },
+    {
+        "nome": "Camiseta Mitchell & Ness Finals Masculina - Preto",
         "tipo": "Roupa",
-        "especificacao": "Feminino",
-        "precovista": "R$ 152,00 à vista",
-        "precoparcelado": "R$ 160,90 em até 2x sem juros",
-        "img1": "img/produto4.1.jpg",
-        "img2": "img/produto4.2.jpg"
+        "especificacao": "Masculino",
+        "precovista": "R$ 89,99 à vista",
+        "precoparcelado": "R$ 100,99 em até 2x sem juros",
+        "img1": "img/produto15.1.png",
+        "img2": "img/produto15.2.png"
+    },
+    {
+        "nome": "Regata Basquete Masculina Plus Size M10 Classic Chicago - Preto",
+        "tipo": "Roupa",
+        "especificacao": "Masculino",
+        "precovista": "R$ 93,19 à vista",
+        "precoparcelado": "R$ 100,99 em até 2x sem juros",
+        "img1": "img/produto16.1.png",
+        "img2": "img/produto16.2.png"
+    },
+    {
+        "nome": "Tênis Nike Court Borough Low Recraft Infantil - Branco",
+        "tipo": "Tênis",
+        "especificacao": "Infantil",
+        "precovista": "R$ 351,49 à vista",
+        "precoparcelado": "R$ 369,99 em até 5x sem juros",
+        "img1": "img/produto17.1.png",
+        "img2": "img/produto17.2.png"
+    },
+    {
+        "nome": "Tênis Infantil Mizuno Cool Ride 3 - Azul",
+        "tipo": "Tênis",
+        "especificacao": "Infantil",
+        "precovista": "R$ 209,99 à vista",
+        "precoparcelado": "3x de R$ 70,00 sem juros",
+        "img1": "img/produto18.1.png",
+        "img2": "img/produto18.2.png"
+    },
+    {
+        "nome": "Conjunto Infantil Adidas Essentials Unissex - Roxo",
+        "tipo": "Roupa",
+        "especificacao": "Infantil",
+        "precovista": "R$ 134,99 à vista",
+        "precoparcelado": "R$ 149,99 em até 2x sem juros",
+        "img1": "img/produto19.1.png",
+        "img2": "img/produto19.2.png"
+    },
+    {
+        "nome": "Bermuda Infantil Fila Regular Letter Light Menino - Verde",
+        "tipo": "Roupa",
+        "especificacao": "Infantil",
+        "precovista": "R$ 61,74 à vista",
+        "precoparcelado": "R$ 79,80 em até 2x sem juros",
+        "img1": "img/produto20.1.png",
+        "img2": "img/produto20.2.png"
+    },
+    {
+        "nome": "Tênis Infantil Avura Ranger Menino - Marinho+Preto",
+        "tipo": "Tênis",
+        "especificacao": "Infantil",
+        "precovista": "R$ 52,24 à vista",
+        "precoparcelado": "R$ 79,80 em até 2x sem juros",
+        "img1": "img/produto21.1.png",
+        "img2": "img/produto21.2.png"
+    },
+    {
+        "nome": "Tênis Infantil Avura Wave Menina - Marinho+Lilás",
+        "tipo": "Tênis",
+        "especificacao": "Infantil",
+        "precovista": "R$ 56,99 à vista",
+        "precoparcelado": "R$ 69,80 em até 2x sem juros",
+        "img1": "img/produto22.1.png",
+        "img2": "img/produto22.2.png"
+    },
+    {
+        "nome": "Tênis Olympikus Masculino Qu4dra BR1 - Azul+amarelo",
+        "tipo": "Tênis",
+        "especificacao": "Masculino",
+        "precovista": "R$ 474,90 à vista",
+        "precoparcelado": "R$ 499,90 em até 7x sem juros",
+        "img1": "img/produto23.1.png",
+        "img2": "img/produto23.2.png"
+    },
+    {
+        "nome": "Tênis Fila Ace - Preto+Branco",
+        "tipo": "Tênis",
+        "especificacao": "Unissex",
+        "precovista": "R$ 199,90 à vista",
+        "precoparcelado": "até 2x de R$ 99,95 sem juros",
+        "img1": "img/produto24.1.png",
+        "img2": "img/produto24.2.jpg"
+    },
+    {
+        "nome": "Tênis Basquete Puma MB.01 Thermal - Verde+Vermelho",
+        "tipo": "Tênis",
+        "especificacao": "Unissex",
+        "precovista": "R$ 645,99 à vista",
+        "precoparcelado": "R$ 679,99 em até 9x sem juros",
+        "img1": "img/produto25.1.png",
+        "img2": "img/produto25.2.png"
+    },
+    {
+        "nome": "Tênis Puma Scoot 1 NBA 2K – Preto",
+        "tipo": "Tênis",
+        "especificacao": "Unissex",
+        "precovista": "R$ 569,99 à vista",
+        "precoparcelado": "R$ 599,99 em até 8x sem juros",
+        "img1": "img/produto26.1.png",
+        "img2": "img/produto26.2.png"
     }
-
 ]

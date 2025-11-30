@@ -227,7 +227,7 @@ class ProdutoPage extends StatelessWidget {
 
                   SizedBox(
                     width: double.infinity,
-                    height: 300,
+                    height: 350,
                     child: Image.asset(
                     produto.img1,
                     fit: BoxFit.cover,
