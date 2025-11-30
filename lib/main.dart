@@ -15,6 +15,8 @@ List<Produto> maisVendidos = produto.take(4).toList();
 List<Produto> lancamentos = produto.skip(4).take(4).toList();
 List<Produto> recomendados = produto.skip(8).take(4).toList();
 
+
+
 class VirtusApp extends StatefulWidget {
   const VirtusApp({super.key});
 
@@ -98,7 +100,7 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                    MaterialPageRoute(builder: (context) => CategoriaPage(especificacao: "Feminino")),
                   );
                 },
               ),
@@ -116,14 +118,14 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                    MaterialPageRoute(builder: (context) => CategoriaPage(especificacao: "Masculino")),
                   );
                 },
               ),
               SizedBox(height: 10),
               ListTile(
                 title: Text(
-                  'Esporte',
+                  'Unissex',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
@@ -134,7 +136,7 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                    MaterialPageRoute(builder: (context) => CategoriaPage(especificacao: "Unissex")),
                   );
                 },
               ),
@@ -152,7 +154,7 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                    MaterialPageRoute(builder: (context) => CategoriaPage(especificacao: "Infantil")),
                   );
                 },
               ),

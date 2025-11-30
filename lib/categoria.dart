@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_virtus/main.dart';
+import 'package:flutter_virtus/widget/exibirprod.dart';
 import 'produtocard.dart';
+import 'produtoclass.dart';
 
 class CategoriaPage extends StatelessWidget {
-  const CategoriaPage({super.key});
+  final String especificacao;
+
+  const CategoriaPage({super.key, required this.especificacao});
 
   @override
   Widget build(BuildContext context) {
+     List<Produto> filtro = produto.where((p) => p.especificacao == especificacao).toList();
     return Scaffold(
       endDrawer: Drawer(
         child: Builder(
@@ -26,7 +31,7 @@ class CategoriaPage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                    MaterialPageRoute(builder: (context) => CategoriaPage(especificacao: "Feminino")),
                   );
                 },
               ),
@@ -44,14 +49,14 @@ class CategoriaPage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                    MaterialPageRoute(builder: (context) => CategoriaPage(especificacao: "Masculino")),
                   );
                 },
               ),
               SizedBox(height: 10),
               ListTile(
                 title: Text(
-                  'Esporte',
+                  'Unissex',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
@@ -62,7 +67,7 @@ class CategoriaPage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                    MaterialPageRoute(builder: (context) => CategoriaPage(especificacao: "Unissex")),
                   );
                 },
               ),
@@ -80,7 +85,7 @@ class CategoriaPage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CategoriaPage()),
+                    MaterialPageRoute(builder: (context) => CategoriaPage(especificacao: "Infantil")),
                   );
                 },
               ),
@@ -181,7 +186,7 @@ class CategoriaPage extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      'Feminino',
+                      especificacao,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 16,
@@ -197,86 +202,7 @@ class CategoriaPage extends StatelessWidget {
                 color: Color.fromRGBO(0, 0, 0, 1),
               ),
             
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 30, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[1]),
-                  ProdutoCard(produto: produto[1]),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[1]),
-                  ProdutoCard(produto: produto[1]),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[1]),
-                  ProdutoCard(produto: produto[1]),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[1]),
-                  ProdutoCard(produto: produto[1]),
-                ],
-              ),
-              ),
-                            Padding(
-                padding: const EdgeInsets.fromLTRB(12, 30, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[1]),
-                  ProdutoCard(produto: produto[1]),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[1]),
-                  ProdutoCard(produto: produto[1]),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[1] ),
-                  ProdutoCard(produto: produto[1]),
-                ],
-              ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ProdutoCard(produto: produto[1]),
-                  ProdutoCard(produto: produto[1]),
-                ],
-              ),
-              ),
+              exibirprod(filtro),
               
               SizedBox(height: 100),
 
